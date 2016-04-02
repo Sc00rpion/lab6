@@ -15,6 +15,7 @@ def txtToNum(filePath):
 	return tab
 	
 if len(sys.argv) > 1:
+	print txtToNum(sys.argv[1])
 	
 else:
 	print 'SYNOPSIS: ./p4 file [file2] [...]'
