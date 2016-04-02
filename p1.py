@@ -9,9 +9,11 @@ def txtToNum(filePath):
 	tab = []
 	inFile = open(filePath).read()
 	if len(inFile) % 2 != 0:
-		inFile.append(' ')
-	for i in range(0,len(inFile)):
+		inFile += ' '
+	i = 0
+	while i < len(inFile):
 		tab.append(ord(inFile[i]) * 1000 + ord(inFile[i+1]))
+		i += 2
 	return tab
 	
 if len(sys.argv) > 1:
