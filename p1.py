@@ -31,7 +31,14 @@ def numToTxt(text):
 	return result
 	
 if len(sys.argv) > 1:
-	print txtToNum(readFile(sys.argv[1]))
+	text = readFile(sys.argv[1])
+	print text
+	numbers = txtToNum(text)
+	prettyNumbers = ''
+	for x in numbers:
+		prettyNumbers += str(x) + ' '
+	print prettyNumbers
+	print numToTxt(prettyNumbers)
 	
 else:
 	print 'SYNOPSIS: ./p4 file [file2] [...]'
