@@ -41,7 +41,7 @@ if len(sys.argv) > 1:
 	print numToTxt(prettyNumbers)
 	
 else:
-	print 'SYNOPSIS: ./p4 file [file2] [...]'
-	print 'SYNOPSIS: ./p4 -c file'
+	print 'SYNOPSIS: ./p1 file'
+
 
 
