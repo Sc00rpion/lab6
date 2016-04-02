@@ -1,8 +1,10 @@
+#!/usr/bin/python
+
 import sys
-import stribg
+import string
 def modularInverse(a, b):
 	x, u, w, z = 0, 1, a, b
-	q, x = 0
+	q = 0
 	while w:
 		if w < z:
 			u, x = x, u
@@ -18,7 +20,7 @@ def modularInverse(a, b):
 	print x
 	return x
 
-l_1 = ibt(sys.argv[1])
-l_2 = ibt(sys.argv[2])
+l_1 = int(sys.argv[1])
+l_2 = int(sys.argv[2])
 #28 i 75 ma byc 67
 print modularInverse(l_1, l_2)
