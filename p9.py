@@ -6,28 +6,24 @@ import p8
 import p1
 
 def cryptRSA(msg, e, n):
-	return = (msg ** e) % n
+	return (msg ** e) % n
 
 def decryptRSA(enc, d, n):
 	return (enc ** d) % n
 	
 if len(sys.argv) > 1:
-	e, d, n = generateKeys()
-	text = readFile(sys.argv[1])
+	e, d, n = p8.generateKeys()
+	text = p1.readFile(sys.argv[1])
 	print text
-	numbers = txtToNum(text)
-	
-	prettyNumbers = ''
+	numbers = p1.txtToNum(text)
+    crypted = []
 	for x in numbers:
-		x = cryptRSA(x, e, n)
-		
-	print prettyNumbers
-	
-	prettyNumbers = ''
-	for x in numbers:
-		x = decryptRSA(x, d, n)
-		prettyNumbers += str(x) + ' '
-	print numToTxt(prettyNumbers)
+		crypted.append(cryptRSA(x, e, n))
+	print crypted
+    decrypted = []
+	for x in crypted:
+		decrypted.append(decryptRSA(x, d, n))
+	print decrypted
 	
 else:
 	print 'SYNOPSIS: ./p9 file'
