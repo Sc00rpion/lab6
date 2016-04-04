@@ -8,7 +8,6 @@ import p5
 import p3
 import p4_euklides
 import p6
-import p1
 
 def randomPQ():
 	r=random.randint(500,1000)

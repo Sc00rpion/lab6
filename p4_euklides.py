@@ -9,5 +9,5 @@ def nwd(a, b):
 if len(sys.argv) > 2:
 	print nwd(int(sys.argv[1]), int(sys.argv[2]))
 else:
-	print 'SYNOPSIS: ./p5 number1 number2'			
+	print 'SYNOPSIS: ./p4 number1 number2'			
 

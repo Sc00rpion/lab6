@@ -19,5 +19,5 @@ def fermat( n, k ):
 if len(sys.argv) > 2:
 	print fermat(int(sys.argv[1]), int(sys.argv[2]))
 else:
-	print 'SYNOPSIS: ./p5 number1 number2'
+	print 'SYNOPSIS: ./p3 number1 number2'
 
