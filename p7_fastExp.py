@@ -18,4 +18,3 @@ def fastExp(a, b, m):
 		i +=2
 	return result % m
 
-print fastExp(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
