@@ -17,8 +17,8 @@ def modularInverse(a, b):
 		return 0
 	if x < 0:
 		x += b
-	print x
 	return x
+
 if len(sys.argv) > 2:
 	l_1 = int(sys.argv[1])
 	l_2 = int(sys.argv[2])
