@@ -3,18 +3,7 @@
 import sys
 import string
 import random
-def fastExp(a, b, m):
-	result = 1
-	x = a % m
-	i = 1
-	while i <=b:
-		x %= m
-		if b & i != 0:
-			result *= x
-			result %= m
-		x *= x
-		i +=2
-	return result % m
+import p7_fastExp
 
 def Fermat( n, k ):
 	i = 0
@@ -22,7 +11,7 @@ def Fermat( n, k ):
 		return True
 	while i < k:
 		a = 2 + random.randint(1, n-2)
-		if fastExp(a, n-1, n) != 1:
+		if p7_fastExp.fastExp(a, n-1, n) != 1:
 			return False
 		i += 1
 	return True
