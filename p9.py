@@ -12,8 +12,8 @@ def decryptRSA(enc, d, n):
 	return (enc ** d) % n
 	
 if len(sys.argv) > 1:
-	text = readFile(sys.argv[1])
-	numbers = txtToNum(text)
+	text = p1.readFile(sys.argv[1])
+	numbers = p1.txtToNum(text)
 	e, d, n = p8.generateKeys()
 	crypted = []
 	decrypted = []
@@ -26,7 +26,8 @@ if len(sys.argv) > 1:
 	print text
 	print p1.numToString(numbers)
 	print p1.numToString(crypted)
-	print p1.numToTxt(decrypted)
+	print p1.numToString(decrypted)
+	print p1.numToTxt(p1.numToString(decrypted))
 
 else:
 	print 'SYNOPSIS: ./p9 file'
