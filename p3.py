@@ -5,7 +5,7 @@ import string
 import random
 import p7_fastExp
 
-def Fermat( n, k ):
+def fermat( n, k ):
 	i = 0
 	if n < 4:
 		return True
@@ -16,4 +16,4 @@ def Fermat( n, k ):
 		i += 1
 	return True
 
-print Fermat(int(sys.argv[1]), int(sys.argv[2]))
+print fermat(int(sys.argv[1]), int(sys.argv[2]))
