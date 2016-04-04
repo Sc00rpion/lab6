@@ -29,14 +29,18 @@ def numToTxt(text):
 		result += chr(x // 1000)
 		result += chr(x % 1000)
 	return result
+
+def numToString(numbers):
+	prettyNumbers = ''
+	for x in numbers:
+		prettyNumbers += str(x) + ' '
+	return prettyNumbers	
 	
 if len(sys.argv) > 1:
 	text = readFile(sys.argv[1])
 	print text
 	numbers = txtToNum(text)
-	prettyNumbers = ''
-	for x in numbers:
-		prettyNumbers += str(x) + ' '
+	prettyNumbers = numToString(numbers)
 	print prettyNumbers
 	print numToTxt(prettyNumbers)
 	

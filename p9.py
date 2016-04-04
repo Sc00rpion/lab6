@@ -13,27 +13,20 @@ def decryptRSA(enc, d, n):
 	
 if len(sys.argv) > 1:
 	text = readFile(sys.argv[1])
-	print text
 	numbers = txtToNum(text)
-	prettyNumbers = ''
-	for x in numbers:
-		prettyNumbers += str(x) + ' '
-	print prettyNumbers
-	
 	e, d, n = p8.generateKeys()
 	crypted = []
-	prettyCrypt = ''
+	decrypted = []
 	for x in numbers:
-		c = cryptRSA(x, e, n)
-		crypted.append(c)
-		prettyCrypt += str(c) + ' '
-	print prettyCrypt
-	print p1.numToTxt(prettyCrypt)
+		singleCrypt = cryptRSA(x, e, n)
+		singleDecrypt = decryptRSA(singleCrypt, d, n)
+		crypted.append(singleCrypt)
+		decrypted.append(singleDecrypt)
 	
-   # decrypted = []
-	#for x in crypted:
-	#	decrypted.append(decryptRSA(x, d, n))
-	#print decrypted
-	
+	print text
+	print p1.numToString(numbers)
+	print p1.numToString(crypted)
+	print p1.numToTxt(decrypted)
+
 else:
 	print 'SYNOPSIS: ./p9 file'
