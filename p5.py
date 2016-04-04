@@ -8,10 +8,13 @@ def relativelyPrime(l1, l2):
 	else:
 		return False
 	
-
-l1 = int(sys.argv[1])
-l2 = int(sys.argv[2])
-if relativelyPrime(l1, l2):
-	print 'Numbers', l1, "and", l2, 'are relatively prime'
+if len(sys.argv) > 2:
+	l1 = int(sys.argv[1])
+	l2 = int(sys.argv[2])
+	if relativelyPrime(l1, l2):
+		print 'Numbers', l1, "and", l2, 'are relatively prime'
+	else:
+		print 'Numbers', l1, 'and', l2, 'aren\'t relatively prime'
 else:
-	print 'Numbers', l1, 'and', l2, 'aren\'t relatively prime'
+	print 'SYNOPSIS: ./p5 number1 number2'
+

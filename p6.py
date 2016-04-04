@@ -19,8 +19,10 @@ def modularInverse(a, b):
 		x += b
 	print x
 	return x
-
-l_1 = int(sys.argv[1])
-l_2 = int(sys.argv[2])
-#28 i 75 ma byc 67
-print modularInverse(l_1, l_2)
+if len(sys.argv) > 2:
+	l_1 = int(sys.argv[1])
+	l_2 = int(sys.argv[2])
+	#28 i 75 ma byc 67
+	print modularInverse(l_1, l_2)
+else:
+	print 'SYNOPSIS: ./p6 number1 number2'
