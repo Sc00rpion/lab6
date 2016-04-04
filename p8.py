@@ -10,16 +10,16 @@ import p4_euklides
 import p6
 
 def randomPQ():
-	r=random.randint(500,1000)
+	r=random.randint(550,1000)
 	while p3.fermat(r, r) == False:
-		r=random.randint(500,1000)
+		r=random.randint(550,1000)
 	return r
 	
 def randomE(p,q):
-	e = random.randint(500,1000)
+	e = random.randint(550,1000)
 	pq = (p-1)*(q-1)
 	while p5.relativelyPrime(e, pq) != True:
-		e=random.randint(500,1000)
+		e=random.randint(550,1000)
 	return e
 def calculateD(e, p, q):
 	pq = (p-1)*(q-1)
