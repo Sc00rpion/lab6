@@ -12,19 +12,19 @@ def writeFile(text, path):
 	open(path, 'w').write(text)
 
 def numCharTogether():
-	return 2
-	
+	return 3
+
+def numComplement():
+	return 4
+
 def complement0(x):
-	
-	complementTo = 3
-	
 	l = len(x)
-	if l != complementTo:
+	if l != numComplement():
 		tmp = ''
-		for i in range(complementTo - l):
+		for i in range(numComplement() - l):
 			tmp += '0'
 		return tmp + x
-	else
+	else:
 		return x
 		
 def addSpace(text, number):
@@ -51,8 +51,8 @@ def numToTxt(text):
 	for x in tab:
 		i = 0
 		while i < len(x):
-			result += chr(x[i:numCharTogether() + i])
-			i += numCharTogether()
+			result += chr(int(x[i:numComplement() + i]))
+			i += numComplement()
 	return result
 
 def numToString(numbers):
