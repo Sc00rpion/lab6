@@ -11,21 +11,29 @@ def readFile(path):
 def writeFile(text, path):
 	open(path, 'w').write(text)
 
+def lenght():
+	return 2
+
 def txtToNum(text):
 	tab = []
-	if len(text) % 2 != 0:
-		text += ' '
+
+	con = len(text) % lenght()
+	if con != 0:
+		for x in range(0,con):
+			text += ' '
 	i = 0
 	while i < len(text):
-		tab.append(ord(text[i]) * 1000 + ord(text[i+1]))
-		i += 2
+		tmp =''
+		for x in range(i,lenght()+i):
+			tmp += str(ord(text[x]))
+		tab.append(long(tmp))
+		i += lenght()
 	return tab
 	
 def numToTxt(text):
 	result = ''
 	tab = text.split()
 	for x in tab:
-		x = int(x)
 		result += chr(x // 1000)
 		result += chr(x % 1000)
 	return result
